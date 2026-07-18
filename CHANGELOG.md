@@ -20,6 +20,10 @@ Todos los cambios relevantes se documentan aquí siguiendo [Keep a Changelog](ht
 - La API `/api/v1/scans` persiste trabajos y expone endpoints de historial y cambios.
 - El dashboard separa riesgo, score, cobertura y confianza.
 
+### Fixed
+
+- La CI invoca pytest y Alembic como módulos para resolver correctamente `backend/app` en Linux.
+
 ### Security
 
 - El perfil profundo requiere una segunda confirmación y mantiene fuera de alcance explotación, secretos, UDP, evasión y crawling extensivo.

@@ -24,8 +24,8 @@ jobs:
       - run: pip install -r requirements-dev.txt
       - run: ruff check app tests
       - run: ruff format --check app tests
-      - run: pytest
-      - run: alembic upgrade head
+      - run: python -m pytest
+      - run: python -m alembic upgrade head
         env:
           DATABASE_URL: sqlite+aiosqlite:///./ci-domaincheck.db
 
