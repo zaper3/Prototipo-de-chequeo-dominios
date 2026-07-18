@@ -1,0 +1,17 @@
+schema: spec-driven
+context: |
+  Producto local y personal para análisis OSINT defensivo y autorizado de dominios públicos.
+  Stack: React/TypeScript/Vite en frontend y FastAPI/Python en backend.
+  La API pública vive bajo /api/v1 y OpenAPI es su contrato canónico.
+  Los análisis son asíncronos, persistentes durante 90 días y tolerantes a fallos parciales.
+  Nunca se permiten objetivos que resuelvan a IP privada, local o reservada.
+  Cada cambio actualiza pruebas, CHANGELOG y los registros operativos afectados.
+rules:
+  proposal:
+    - Incluir objetivo, fuera de alcance, riesgo operativo y estrategia de reversión.
+  specs:
+    - Usar requisitos SHALL/MUST y escenarios GIVEN/WHEN/THEN verificables.
+  design:
+    - Documentar amenazas de red, timeouts, datos sensibles y degradación parcial.
+  tasks:
+    - Incluir pruebas, documentación y evidencia de aceptación.
