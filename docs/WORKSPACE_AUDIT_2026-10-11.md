@@ -71,7 +71,8 @@ Los defectos de HTTP/rebinding, privacidad, scoring y dependencias permanecen pe
 | Smoke localhost con base aislada | PASS, salud/OpenAPI, frontend HTTP 200, proxy, 3 registros de historial y URL con credenciales rechazada 422 |
 | Revisión visual actual | NOT_RUN; UI sin cambios |
 | Escaneo de dominio público/proveedores con claves | NOT_RUN |
-| CI remoto/sincronización final | Pendiente PR y verificación |
+| CI remoto de consolidación | PASS: backend, frontend y specification en [run 38148973562](https://github.com/zaper3/Prototipo-de-chequeo-dominios/actions/runs/38148973562) |
+| Sincronización master tras consolidación | PASS: [PR #2](https://github.com/zaper3/Prototipo-de-chequeo-dominios/pull/2) fusionada; master local/origin idénticos y worktree limpio |
 
 Los servicios del smoke fueron iniciados desde Documents, identificados por proceso/comando y detenidos al terminar; no quedó listener en 5173/8000. La base operativa no se utilizó para el smoke y no se eliminó historial. Evidencia detallada privada en `data/migration-20261011/smoke-results.json`.
 
@@ -79,4 +80,8 @@ Los servicios del smoke fueron iniciados desde Documents, identificados por proc
 
 El repo es público aunque el uso sea personal. La release `v0.2.0-alpha.1` permanece inmutable sobre `5fe9bd2858f99cd8b654293e744083d8e58ecca9`. La consolidación va a Unreleased: no crea `0.2.0-rc.1` ni desplaza el tag.
 
-La sincronización se realizará mediante la rama `chore/consolidate-workspace-20261011`, PR y CI. Tras merge, master local debe quedar limpio e idéntico a origin/master. Los datos, respaldos, entornos y logs no se publican.
+La consolidación se fusionó mediante [PR #2](https://github.com/zaper3/Prototipo-de-chequeo-dominios/pull/2) el 2026-10-11, con CI de sus tres jobs aprobada. Se verificó master local limpio e idéntico a origin/master en `9160d81c4395f45300be9ea0494792db03228ad5`; el tag alpha permanece sobre su SHA original.
+
+El cierre de este registro y archivo OpenSpec se sincroniza en un commit documental posterior, también mediante PR/CI. Los datos, respaldos, entornos y logs no se publican. Git fsck no detectó corrupción; ambos bundles pasan verificación y el checkout/Git/datos operativos no conservan archivos reparse.
+
+Cambio completado: [OpenSpec archivado](../openspec/changes/archive/2026-10-11-consolidate-local-workspace-and-docs/). Requisitos de entrega incorporados a [delivery-governance](../openspec/specs/delivery-governance/spec.md), sin alterar los módulos de análisis.
