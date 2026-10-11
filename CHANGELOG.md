@@ -4,6 +4,14 @@ Todos los cambios relevantes se documentan aquí siguiendo [Keep a Changelog](ht
 
 ## [Unreleased]
 
+### Changed
+
+- 2026-10-11: checkout canónico trasladado a Documents; retirado el uso de la copia OneDrive, con respaldos locales de código, Git e historial.
+- Restaurados cuatro archivos OpenSpec ausentes en la copia destino y reconstruidos los entornos Python/npm; archivos del checkout convertidos en archivos locales sin placeholders cloud.
+- Documentación alineada con SQLite, URLs, alcance real de perfiles, scoring y limitaciones de seguridad; candidata local 0.1 identificada como sustituida.
+- Verificación documental de versiones/enlaces/especificaciones integrada en CI, guía de workspace portable y respaldo SQLite consistente.
+- Registradas alertas de dependencias y deuda del producto sin cambiar el motor ni retaggear la alpha.
+
 ## [0.2.0-alpha.1] - 2026-07-18
 
 ### Added
@@ -30,6 +38,8 @@ Todos los cambios relevantes se documentan aquí siguiendo [Keep a Changelog](ht
 
 ## [0.1.0-rc.1] - 2026-07-18
 
+Candidata local histórica, sustituida por la alpha; no se publicó tag ni release `v0.1.0-rc.1`.
+
 ### Added
 
 - API FastAPI asíncrona para ejecutar y consultar análisis en memoria.
@@ -45,5 +55,5 @@ Todos los cambios relevantes se documentan aquí siguiendo [Keep a Changelog](ht
 - Confirmación explícita de autorización, validación estricta del dominio, bloqueo de IP privada/reservada, rate limit y límites de concurrencia/tiempo.
 
 [Unreleased]: https://github.com/zaper3/Prototipo-de-chequeo-dominios/compare/v0.2.0-alpha.1...HEAD
-[0.2.0-alpha.1]: https://github.com/zaper3/Prototipo-de-chequeo-dominios/compare/v0.1.0-rc.1...v0.2.0-alpha.1
-[0.1.0-rc.1]: https://github.com/zaper3/Prototipo-de-chequeo-dominios/releases/tag/v0.1.0-rc.1
+[0.2.0-alpha.1]: https://github.com/zaper3/Prototipo-de-chequeo-dominios/releases/tag/v0.2.0-alpha.1
+[0.1.0-rc.1]: openspec/changes/initialize-osint-prototype/

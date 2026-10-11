@@ -1,5 +1,7 @@
 # Proposal: Initialize OSINT domain-check prototype
 
+> Registro histórico de la candidata local 0.1, sustituida por `add-history-and-risk-engine`. Su exclusión de persistencia no describe la alpha actual. Estado reconciliado el 2026-10-11; no hubo release/tag 0.1 publicado.
+
 ## Why
 
 El repositorio solo contenía una descripción inicial y necesitaba una base funcional, segura y documentada para analizar dominios desde una interfaz local.

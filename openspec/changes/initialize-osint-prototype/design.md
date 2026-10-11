@@ -1,5 +1,7 @@
 # Design
 
+> Diseño histórico 0.1 (dominio desnudo/resultados en memoria), no arquitectura vigente. La implementación actual se describe en [arquitectura](../../../docs/ARCHITECTURE.md) y el cambio `add-history-and-risk-engine`.
+
 ## Approach
 
 React consulta trabajos FastAPI mediante polling. El backend valida el dominio y la resolución pública antes de lanzar tareas concurrentes; cada fuente devuelve datos normalizados o un error parcial. El escaneo TCP usa workers limitados y termina al alcanzar el plazo global. Una función determinista transforma evidencias en score y hallazgos.
