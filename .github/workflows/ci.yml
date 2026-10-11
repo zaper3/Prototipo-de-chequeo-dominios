@@ -22,8 +22,10 @@ jobs:
           cache: pip
           cache-dependency-path: backend/requirements-dev.txt
       - run: pip install -r requirements-dev.txt
-      - run: ruff check app tests
-      - run: ruff format --check app tests
+      - run: ruff check app tests migrations
+      - run: ruff format --check app tests migrations
+      - run: ruff check ../scripts
+      - run: ruff format --check ../scripts
       - run: python -m pytest
       - run: python -m alembic upgrade head
         env:
@@ -52,4 +54,9 @@ jobs:
       - uses: actions/setup-node@v6
         with:
           node-version: "24"
-      - run: npx -y @fission-ai/openspec@latest validate --all --no-interactive
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+      - run: node scripts/check-docs.mjs
+      - run: python -m unittest discover -s scripts/tests
+      - run: npx -y @fission-ai/openspec@1.14.1 validate --all --no-interactive

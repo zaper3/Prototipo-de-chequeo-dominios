@@ -18,4 +18,4 @@ Autenticación, despliegue público, cifrado de la base, UDP, crawling extensivo
 
 ## Operational Risk and Rollback
 
-El perfil profundo puede generar tráfico visible y SQLite añade riesgo de retención local. Se mitiga con doble confirmación, límites, retención y exclusión de Git. Para revertir: detener servicios, respaldar la base y volver al tag anterior; no aplicar downgrade destructivo sin una copia verificada.
+El perfil profundo puede generar tráfico visible y SQLite añade riesgo de retención local. Se mitiga con doble confirmación, límites, retención y exclusión de Git. Para revertir: detener servicios, respaldar la base y volver a un commit/tag compatible conocido; no aplicar downgrade destructivo sin una copia verificada. La candidata local 0.1 no tiene tag publicado.

@@ -40,4 +40,4 @@ Cada hallazgo SHALL incluir ID estable, categoría, severidad, evidencia, fuente
 
 - GIVEN un informe completado
 - WHEN se abre el resumen
-- THEN explica por qué obtuvo la categoría, muestra tres acciones prioritarias y enumera limitaciones y errores parciales
+- THEN explica por qué obtuvo la categoría, muestra hasta tres acciones prioritarias disponibles y enumera limitaciones y errores parciales
