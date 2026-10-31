@@ -13,6 +13,7 @@
 | `BUG-2026-009` | 2026-10-11 | triaged | high | Privacidad | str(exc) de HTTPStatusError puede incluir una URL de Safe Browsing con clave. | Inspección de _reputation; no se usaron claves reales. | `0.2.0-alpha.1` | Pendiente; RISK-008 |
 | `BUG-2026-010` | 2026-10-11 | triaged | medium | Scoring | Datos no recogidos/fallidos pueden interpretarse como control ausente o TLS inválido. | Inspección de fallbacks del scanner y reglas DNSSEC/correo/TLS. | reglas `2.0.0` | Pendiente; RISK-009 |
 | `BUG-2026-011` | 2026-10-11 | verified | low | OpenSpec | Los deltas MODIFIED de la alpha omitían escenarios de los specs vigentes; la CLI actual los rechaza. | openspec validate --all --no-interactive. | documentación de alpha | `FIX-2026-007` |
+| `BUG-2026-012` | 2026-10-31 | verified | low | QA README | Los hashes binarios de fuentes CRLF en Windows no coincidían con el checkout LF de CI, pese a no cambiar su contenido. | Primer job specification de PR #4: Screenshot inputs changed, App.tsx. | Unreleased / docs | `FIX-2026-008` |
 
 Los fixes de octubre son de checkout, entorno y documentación; no modifican retroactivamente la release alpha. Los defectos del producto identificados quedan pendientes de cambios específicos y pruebas de regresión.
 

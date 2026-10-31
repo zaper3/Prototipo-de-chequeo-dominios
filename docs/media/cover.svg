@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="360" viewBox="0 0 1280 360" role="img" aria-labelledby="title description">
+  <title id="title">DomainCheck — Prototipo de chequeo de dominios</title>
+  <desc id="description">Portada ilustrada con radar y módulos de inteligencia de dominios. No es una captura de ejecución.</desc>
+  <defs>
+    <linearGradient id="background" x2="1" y2="1">
+      <stop stop-color="#061410"/><stop offset="1" stop-color="#0c1623"/>
+    </linearGradient>
+    <linearGradient id="mint"><stop stop-color="#a3f3cf"/><stop offset="1" stop-color="#26b58a"/></linearGradient>
+    <radialGradient id="glow"><stop stop-color="#1b8767" stop-opacity=".28"/><stop offset="1" stop-color="#1b8767" stop-opacity="0"/></radialGradient>
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M40 0H0V40" fill="none" stroke="#75c8ab" stroke-opacity=".055"/></pattern>
+  </defs>
+  <rect width="1280" height="360" rx="20" fill="url(#background)"/>
+  <rect width="1280" height="360" rx="20" fill="url(#grid)"/>
+  <circle cx="1000" cy="180" r="260" fill="url(#glow)"/>
+  <rect x="1" y="1" width="1278" height="358" rx="19" fill="none" stroke="#72cfad" stroke-opacity=".18"/>
+  <g font-family="Segoe UI, Inter, Arial, sans-serif">
+    <rect x="54" y="49" width="35" height="35" rx="10" fill="#138b69"/>
+    <g stroke="#c4ffe3" fill="none" stroke-width="1.8">
+      <path d="M64 63v-5h5m5 0h5v5m0 7v5h-5m-5 0h-5v-5"/>
+      <circle cx="71.5" cy="66.5" r="3.5"/><path d="m74 69 3 3"/>
+    </g>
+    <text x="103" y="72" fill="#b4c9c0" font-size="12" font-weight="600" letter-spacing="3">INTELIGENCIA DE DOMINIOS</text>
+    <text x="52" y="160" font-size="68" font-weight="750" fill="#effaf5" letter-spacing="-2">DOMAIN<tspan fill="url(#mint)">CHECK</tspan></text>
+    <text x="55" y="203" fill="#bacdc4" font-size="23">Evidencia antes que confianza.</text>
+    <text x="55" y="234" fill="#7e9b8f" font-size="15">OSINT · DNS · TLS / HTTP · HISTORIAL · RIESGO OBSERVADO</text>
+    <rect x="55" y="271" width="131" height="29" rx="14" fill="#112c22" stroke="#2c7257"/>
+    <circle cx="72" cy="285.5" r="3.5" fill="#59d9aa"/>
+    <text x="85" y="290" fill="#9ce3c2" font-size="11" font-weight="600" letter-spacing="1">LOCAL FIRST</text>
+    <text x="205" y="290" fill="#7e9b8f" font-size="12">Prototipo de chequeo de dominios</text>
+  </g>
+  <g transform="translate(1000 180)" fill="none" stroke="#68d4ac">
+    <circle r="126" stroke-opacity=".12"/><circle r="95" stroke-opacity=".2"/>
+    <circle r="64" stroke-opacity=".3"/><circle r="33" stroke-opacity=".38"/>
+    <path d="M-140 0H140M0-140V140" stroke-opacity=".13"/>
+    <path d="M0 0 94-84A126 126 0 0 0 0-126Z" fill="#4acb9a" fill-opacity=".09" stroke="none"/>
+    <path d="M0 0 94-84" stroke-opacity=".7"/>
+    <circle cx="52" cy="-47" r="5" fill="#86efbd" stroke="none"/>
+    <circle cx="-48" cy="40" r="4" fill="#79b6db" stroke="none"/>
+    <circle cx="17" cy="89" r="3" fill="#86efbd" stroke="none"/>
+    <circle r="7" fill="#a9f6cc" stroke="none"/>
+    <g font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#9dbdb0" stroke="none">
+      <text x="-138" y="-109">DNS</text><text x="105" y="-37">TLS</text>
+      <text x="-140" y="112">HTTP</text><text x="84" y="112">OSINT</text>
+    </g>
+  </g>
+</svg>

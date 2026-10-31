@@ -6,6 +6,10 @@ Todos los cambios relevantes se documentan aquí siguiendo [Keep a Changelog](ht
 
 ### Changed
 
+- 2026-10-31: README principal en español y README.en.md equivalente, con portada original, capturas del frontend con datos sintéticos, navegación y guía reutilizable.
+- Comprobación de paridad de comandos, anchors y procedencia de medios; sin cambios del motor, versión, licencia o release.
+- El hash de procedencia textual se normaliza a LF para Windows/Linux, con pruebas de regresión; PNG conserva verificación binaria.
+
 - 2026-10-11: checkout canónico trasladado a Documents; retirado el uso de la copia OneDrive, con respaldos locales de código, Git e historial.
 - Restaurados cuatro archivos OpenSpec ausentes en la copia destino y reconstruidos los entornos Python/npm; archivos del checkout convertidos en archivos locales sin placeholders cloud.
 - Documentación alineada con SQLite, URLs, alcance real de perfiles, scoring y limitaciones de seguridad; candidata local 0.1 identificada como sustituida.
