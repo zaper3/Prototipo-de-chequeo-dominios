@@ -59,5 +59,6 @@ jobs:
           python-version: "3.13"
       - run: node scripts/check-docs.mjs
       - run: node scripts/docs/check-readme.mjs
+      - run: node --test scripts/docs/source-digest.test.mjs
       - run: python -m unittest discover -s scripts/tests
       - run: npx -y @fission-ai/openspec@1.14.1 validate --all --no-interactive

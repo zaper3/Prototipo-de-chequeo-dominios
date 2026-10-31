@@ -10,4 +10,6 @@
 | `FIX-2026-006` | `BUG-2026-006` | 2026-10-11 | Documentos iniciales no reconciliados con alpha/código/GitHub. | Revisar guías, seguridad, candidatas, OpenSpec y limitaciones; incorporar verificador de enlaces/versiones a CI. | check-docs, OpenSpec y auditoría documental contra código. | Unreleased / auditoría octubre | revisión local + CI de consolidación |
 | `FIX-2026-007` | `BUG-2026-011` | 2026-10-11 | MODIFIED reemplaza un bloque completo, no solo su escenario nuevo. | Restituir escenarios de rechazo/perfil/clasificación y conservar nombre de presentación. | Validación OpenSpec actual de todos los cambios/specs. | Unreleased / documentación | CLI OpenSpec |
 
-La evidencia completa está en [auditoría de consolidación](../WORKSPACE_AUDIT_2026-10-11.md). No se cerraron BUG-2026-007 a 010 ni se declaró una nueva release.
+| `FIX-2026-008` | `BUG-2026-012` | 2026-10-31 | Git conserva texto equivalente con finales de línea diferentes entre Windows y Linux. | Normalizar a LF solo los hashes de fuentes, conservando hashes PNG binarios y detección de cambios reales. | Tres tests Node de LF/CRLF, contenido distinto y líneas en blanco; QA local de manifiesto. | Unreleased / docs | tests Node + gate README |
+
+La evidencia de consolidación está en [auditoría](../WORKSPACE_AUDIT_2026-10-11.md), y la del README en [validación documental](../validation/2026-10-31-readme-refresh.md). No se cerraron BUG-2026-007 a 010 ni se declaró una nueva release.

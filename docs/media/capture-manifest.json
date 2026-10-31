@@ -21,9 +21,10 @@
     "evidence",
     "responsive-390px"
   ],
+  "source_text_normalization": "LF",
   "source_sha256": {
-    "app": "009c914aa3c82a931fff0e6ee1f11f4db24e3c502dcd45d0c96db73b088bf2e1",
-    "styles": "fca21784fd7a7c832f5b5ef679bb4ea4d2d7b5457c91f46393809b082da6ca28",
+    "app": "dc111741d2616e462b1ff3e7b10d4e20f484488df297b4d16415453cd65e9eef",
+    "styles": "0036a8978bf448f143b2de812b8d2d7878a3e113f4a5da5a2a1dff9e1d0b48fe",
     "fixtures": "cb3027dec8ef802949c5da44c90704a1ca718f2cc3ed5f1bf9c4ef9725eee565"
   },
   "images": [

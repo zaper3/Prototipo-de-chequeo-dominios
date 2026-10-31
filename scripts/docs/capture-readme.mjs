@@ -6,6 +6,7 @@ import { existsSync, readFileSync, statSync, mkdirSync, writeFileSync } from "no
 import { dirname, extname, resolve, sep } from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { changes, history, job } from "./readme-fixtures.mjs";
+import { sourceDigest } from "./source-digest.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const dist = resolve(root, "frontend/dist");
@@ -110,9 +111,11 @@ try {
     private_history_accessed: false, backend_started: false, public_scans: 0,
     external_page_requests: forbidden.length, page_errors: pageErrors.length,
     checks: ["hostname-preview", "history", "report-reopening", "comparison", "dns", "evidence", "responsive-390px"],
+    source_text_normalization: "LF",
     source_sha256: {
-      app: digest("frontend/src/App.tsx"), styles: digest("frontend/src/styles.css"),
-      fixtures: digest("scripts/docs/readme-fixtures.mjs"),
+      app: sourceDigest(readFileSync(resolve(root, "frontend/src/App.tsx"), "utf8")),
+      styles: sourceDigest(readFileSync(resolve(root, "frontend/src/styles.css"), "utf8")),
+      fixtures: sourceDigest(readFileSync(resolve(root, "scripts/docs/readme-fixtures.mjs"), "utf8")),
     },
     images: ["scan-start.png", "risk-overview.png", "scan-history.png"].map((name) => ({
       file: name, sha256: digest("docs/media/" + name),

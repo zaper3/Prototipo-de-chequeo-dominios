@@ -223,6 +223,7 @@ Pop-Location
 .\backend\.venv\Scripts\python.exe -m ruff format --check scripts
 node scripts/check-docs.mjs
 node scripts/docs/check-readme.mjs
+node --test scripts/docs/source-digest.test.mjs
 npx -y @fission-ai/openspec@1.14.1 validate --all --no-interactive
 ```
 

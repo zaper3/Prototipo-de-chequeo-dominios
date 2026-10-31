@@ -3,6 +3,7 @@ import { createHash } from "node:crypto";
 import { existsSync, readFileSync } from "node:fs";
 import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
+import { sourceDigest } from "./source-digest.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "../..");
 const read = (name) => readFileSync(resolve(root, name), "utf8");
@@ -53,12 +54,13 @@ assert.equal(manifest.backend_started, false);
 assert.equal(manifest.public_scans, 0);
 assert.equal(manifest.external_page_requests, 0);
 assert.equal(manifest.page_errors, 0);
+assert.equal(manifest.source_text_normalization, "LF");
 const digest = (file) => createHash("sha256").update(readFileSync(resolve(root, file))).digest("hex");
 for (const [key, file] of [
   ["app", "frontend/src/App.tsx"], ["styles", "frontend/src/styles.css"],
   ["fixtures", "scripts/docs/readme-fixtures.mjs"],
 ]) {
-  assert.equal(digest(file), manifest.source_sha256[key], "Screenshot inputs changed: " + file);
+  assert.equal(sourceDigest(read(file)), manifest.source_sha256[key], "Screenshot inputs changed: " + file);
 }
 assert.equal(manifest.images.length, 3);
 for (const item of manifest.images) {

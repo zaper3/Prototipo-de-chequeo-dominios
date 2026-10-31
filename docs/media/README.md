@@ -46,7 +46,7 @@ Se captura inicio a 1440 × 1000; resumen e historial son recortes de elementos.
 - Ausencia de desbordamiento horizontal a 390 px en el resumen.
 - Cero errores de página y cero peticiones externas desde la página.
 - Inspección visual de las tres capturas y la portada.
-- Hashes de PNG, fixtures, componente y estilos para detectar recursos desalineados.
+- Hashes binarios de PNG y hashes de texto de fixtures/componente/estilos normalizados a LF, para no confundir CRLF de Windows con cambios de contenido en Linux.
 - No prueba la persistencia real, la recopilación de fuentes, la puntuación del backend ni todos los flujos responsive/accesibles.
 
 Las comprobaciones no sustituyen la aceptación del producto ni autorizan escaneos. El verificador documental no navega a terceros ni vuelve a tomar capturas durante CI.

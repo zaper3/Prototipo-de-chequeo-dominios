@@ -34,6 +34,7 @@ El [manifiesto](../media/capture-manifest.json) conserva hashes/dimensiones y or
 | Frontend Vitest | PASS, 4 tests |
 | TypeScript/build frontend | PASS |
 | Helper SQLite | PASS, 4 tests |
+| Hashes de procedencia Windows/Linux | PASS, 3 tests Node sobre equivalencia LF/CRLF y detección de cambios reales |
 | Gate documental global | PASS |
 | QA README ES/EN | PASS: comandos, variables, links/anchors, PNG/SVG y hashes de fuentes |
 | OpenSpec 1.14.1 | PASS |
@@ -48,6 +49,8 @@ Las pruebas mockean fuentes externas. La captura de una vista responsive no cons
 
 ## Publicación
 
-Esta acta recoge validaciones locales previas a la publicación autorizada. El resultado remoto se consulta en la PR y en [CI](https://github.com/zaper3/Prototipo-de-chequeo-dominios/actions/workflows/ci.yml), sin atribuirlo a pruebas locales.
+Esta acta recoge validaciones locales y una corrección de CI antes de la fusión. El resultado remoto final se consulta en la PR y en [CI](https://github.com/zaper3/Prototipo-de-chequeo-dominios/actions/workflows/ci.yml), sin atribuirlo a pruebas locales.
+
+La [primera CI de PR #4](https://github.com/zaper3/Prototipo-de-chequeo-dominios/actions/runs/41187197766) pasó backend/frontend pero rechazó el hash de App.tsx por CRLF frente a LF, sin cambios de código. BUG-2026-012 / FIX-2026-008 normaliza únicamente texto a LF y añade tres regresiones; los PNG siguen verificándose byte a byte. La procedencia queda explícita en `source_text_normalization`.
 
 Se prepara una entrega documental bajo `Unreleased`, con PR/CI antes de fusionar. El tag `v0.2.0-alpha.1` permanece en `5fe9bd2858f99cd8b654293e744083d8e58ecca9`; no se publica nueva release. Los medios, la guía y los helpers son nuevos; el código del motor y la UI permanecen sin cambios.
