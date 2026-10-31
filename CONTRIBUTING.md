@@ -14,3 +14,5 @@ En este equipo utiliza la ubicación canónica de [README](README.md), no el che
 Mantén diferenciados: validación local, CI remoto, revisión visual, prueba con terceros y aprobación de publicación. Una prueba no realizada debe constar como `NOT_RUN`, no como aprobada.
 
 No incluyas claves, datos personales, resultados sensibles ni dominios analizados en commits, fixtures o incidencias.
+
+Para presentación del repositorio, sigue la [guía reutilizable ES/EN](docs/README_STYLE_GUIDE.md): mantén ambos README equivalentes y etiqueta la procedencia de las capturas. Ejecuta `node scripts/docs/check-readme.mjs` cuando cambien README, fixtures o medios; no uses historial privado para preparar imágenes.
